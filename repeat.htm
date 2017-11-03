@@ -1,0 +1,23 @@
+<html>
+    <title>
+        angular first app
+    </title>
+    <body>
+        <h1>sample application
+
+        </h1>
+        <div ng-app="" ng-init="countries=[{locale:'en-us',name:'United States'},
+                                {locale:'en-GB',name:'United Kingdom'},
+                                {locale:'en-FR',name:'France'}]">
+            <p>List of countries with locale</p>
+            <ol>
+                <li ng-repeat="country in countries">
+                    {{ 'Country: '+country.name+', Locale: '+country.locale}} 
+                </li>
+            </ol>
+            <p>Enter Your Name:<input type="text" ng-model="name"></p>
+            <p>Hello <span ng-bind="name"></span>!</p>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    </body>
+</html>
